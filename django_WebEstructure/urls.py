@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django_WebEstructure.views import home_view
+from ficha.views import detalle_ficha_basica, crear_ficha_basica
 
 urlpatterns = [
+    path('', home_view, name='home'),
     path('admin/', admin.site.urls),
-    path('home/', home_view, name='home'),
-    path('', home_view, name='home')
+    path('home/', home_view),
+    path('detalle/', detalle_ficha_basica),
+    path('ficha/', crear_ficha_basica)
 ]

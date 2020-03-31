@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Ficha </h1>
+
+<p> This is a ficha template </p>
+
+<form action='/detalle/' method='POST'> {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Guardar'/>
+</form>
+
+{% endblock %}
